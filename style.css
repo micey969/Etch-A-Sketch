@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-body{
+body,#page{
 	margin: 0;
 	padding: 0;
 	font: Arial, serif;
@@ -11,27 +11,30 @@ body{
 }
 header{
 	background-color: #750FBD ;
-	margin: 10px;
+	margin: 10px auto;
 	padding: 5px;
 	border: solid black;
 	border-radius: 15%;
+	position: relative;
 }
 h1{
 	text-align: center;
 	font-weight: bold;
 }
+#buttons{
+	position: relative;
+	height: auto;
+	text-align: center;
+}
 button{
 	border-radius: 3%;
-	position: relative;
 	padding: 2px;
 	color: white;
 	background-color: #BF113A;
-	top: 50%;
-	left: 40%;
 }
 #content{
 	top: 5%;
-	left: 15%;
+	margin: 0 auto;
 	position: relative;
 	border: 10px solid #BF113A;
 	height: 512px;

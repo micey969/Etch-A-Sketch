@@ -1,9 +1,9 @@
 //make the grids
 function makeGrid(num){
-	for(var i=0;i<num;i++){
-		for(var j=0;j<num;j++){
-			$('#content').append('<div class="grid"></div>');
-		}
+	if (num < 1) {num = 1;}
+	if (num > 128) {num = 128;}
+	for(var i=0;i<num*num;i++){
+		$('#content').append('<div class="grid"></div>');
 	}
 	$('.grid').height(512/num);
 	$('.grid').width(960/num);
@@ -30,14 +30,14 @@ $(document).ready(function(){
 	makeGrid(16);
 
 	//default sketching
-	$('.grid').mouseover(function(){
+	$('.grid').hover(function(){
 		$(this).css('background-color','#460CE8');
 
 	});
 
 	//to get the random colors effect
 	$('.rc').click(function(){
-		$('.grid').mouseover(function(){
+		$('.grid').hover(function(){
 			$(this).css('background-color',randomColor());
 		});	
 	});
@@ -47,7 +47,7 @@ $(document).ready(function(){
 	$('.cs').click(function(){
 		$('.grid').remove();
 		refresh();
-		$('.grid').mouseover(function(){
+		$('.grid').hover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	$('.clr').click(function(){
 		$('.grid').remove();
 		refresh();
-		$('.grid').mouseover(function(){
+		$('.grid').hover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
@@ -65,7 +65,7 @@ $(document).ready(function(){
 	$('.def').click(function(){
 		$('.grid').remove();
 		makeGrid(16);
-		$('.grid').mouseover(function(){
+		$('.grid').hover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
