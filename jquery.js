@@ -30,14 +30,14 @@ $(document).ready(function(){
 	makeGrid(16);
 
 	//default sketching
-	$('.grid').hover(function(){
+	$('.grid').mouseover(function(){
 		$(this).css('background-color','#460CE8');
 
 	});
 
 	//to get the random colors effect
 	$('.rc').click(function(){
-		$('.grid').hover(function(){
+		$('.grid').mouseover(function(){
 			$(this).css('background-color',randomColor());
 		});	
 	});
@@ -47,7 +47,7 @@ $(document).ready(function(){
 	$('.cs').click(function(){
 		$('.grid').remove();
 		refresh();
-		$('.grid').hover(function(){
+		$('.grid').mouseover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	$('.clr').click(function(){
 		$('.grid').remove();
 		refresh();
-		$('.grid').hover(function(){
+		$('.grid').mouseover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
@@ -65,7 +65,7 @@ $(document).ready(function(){
 	$('.def').click(function(){
 		$('.grid').remove();
 		makeGrid(16);
-		$('.grid').hover(function(){
+		$('.grid').mouseover(function(){
 			$(this).css('background-color','#460CE8');
 		});
 	});
