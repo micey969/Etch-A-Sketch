@@ -1,7 +1,7 @@
 //make the grids
 function makeGrid(num){
 	if (num < 1) {num = 1;}
-	if (num > 128) {num = 128;}
+	if (num > 100) {num = 100;}
 	for(var i=0;i<num*num;i++){
 		$('#content').append('<div class="grid"></div>');
 	}
