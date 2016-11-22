@@ -11,7 +11,7 @@ function makeGrid(num){
 
 //refreshes the grid
 function refresh(){
-	var size = prompt ('Enter desired size of grid [1-128]');
+	var size = prompt ('Enter desired size of grid [1-100]');
 	makeGrid(size);
 };
 
